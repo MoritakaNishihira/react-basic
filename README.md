@@ -2,7 +2,7 @@
 
 React の基本を学ぶ
 
-# html
+# index.html
 
 【お作法】index.html は以下の記述のみ
 
