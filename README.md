@@ -21,12 +21,15 @@ React の基本を学ぶ
 
 コンポーネントは関数で作る
 関数名の頭は大文字
+```
 const App = () => {....}
+```
 
 コンポーネントの場合、拡張子は jsx にする
-App.jsc
+App.jsx
 
-複数の html タグが含まれるコンポーネントは <div></div> で囲む
+複数の html タグが含まれるコンポーネントは ```<div></div>``` で囲む
+```
 const App = () => {
 return (
 
@@ -35,18 +38,23 @@ return (
   <p> today is 2024.4.1 </p>
   </div>
   )}
+```
 
 各イベント名は先頭小文字の キャメル記法で書く
 イベントは {} で囲む。
+```
 <button onClick = {() => {....}}> ボタン </button>
+```
 
 スタイルはオブジェクト形式で記述する。
 スタイルはキャメル記法で書く font-size → fontSize
+```
 const contentStyle = {
 color : "red",
 fontSize : "18px"
 margin : 10
 }
+```
 
 # index.js
 
@@ -54,6 +62,7 @@ index.js も必要最低限の記述のみにし、必要なコンポーネン�
 StrictMode とは、<StrictMode></StrictMode>で囲まれた範囲を厳密なルールで react を定義する
 下記の場合、root という ID を持つ element 配下に App コンポーネントをレンダリングしている
 
+```
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App";
@@ -68,16 +77,19 @@ root.render(
 <App></App>
 </StrictMode>
 );
-
+```
 # props
 
 コンポーネントへの引数
 コンポーネントの振る舞いを切り替える場合などに使う
 コンポーネントタグの中に書く
 下記の場合 fontColor と context が props として渡される
+```
 <ColofullMessage fontColor = "blue" context = "お元気ですか？"></ColofullMessage>
+```
 
 受け取った側では下記のように使う
+```
 export const ColofullMessage = (props) => {
 const {fontColor , context} = props
 const contentStyle = {
@@ -86,3 +98,4 @@ fontSize : "18px"
 }
 return <p style={contentStyle}>{context}</p>;
 };
+```
