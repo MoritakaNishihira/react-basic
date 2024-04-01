@@ -19,13 +19,13 @@ React の基本を学ぶ
 
 # App.jsx
 
-コンポーネントは関数で作る
+コンポーネントは関数で作る  
 関数名の頭は大文字
 ```
 const App = () => {....}
 ```
 
-コンポーネントの場合、拡張子は jsx にする
+コンポーネントの場合、拡張子は jsx にする  
 App.jsx
 
 複数の html タグが含まれるコンポーネントは ```<div></div>``` で囲む
@@ -39,13 +39,13 @@ return (
   )}
 ```
 
-各イベント名は先頭小文字の キャメル記法で書く
+各イベント名は先頭小文字の キャメル記法で書く  
 処理は { } で囲んで関数で作る。
 ```
 <button onClick = {() => {....}}> ボタン </button>
 ```
 
-スタイルはオブジェクト形式で記述する。
+スタイルはオブジェクト形式で記述する  
 スタイルはキャメル記法で書く font-size → fontSize
 ```
 const contentStyle = {
@@ -57,9 +57,9 @@ const contentStyle = {
 
 # index.js
 
-index.js も必要最低限の記述のみにし、必要なコンポーネントは App.jsx に書く
-StrictMode とは、<StrictMode></StrictMode>で囲まれた範囲を厳密なルールで react を定義する
-下記の場合、root という ID を持つ element 配下に App コンポーネントをレンダリングしている
+index.js も必要最低限の記述のみにし、必要なコンポーネントは App.jsx に書く  
+StrictMode とは、<StrictMode></StrictMode>で囲まれた範囲を厳密なルールで react を定義する  
+下記の場合、root という ID を持つ element 配下に App コンポーネントをレンダリングしている  
 
 ```
 import { StrictMode } from "react";
@@ -69,8 +69,6 @@ import { App } from "./App";
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
-// rootElement 内にコンポーネント(App)をレンダリングする
-// index.js も必要最低限の記述のみにし、諸々のコンポーネントは App.jsx に書く
 root.render(
   <StrictMode>
     <App></App>
@@ -79,10 +77,10 @@ root.render(
 ```
 # props
 
-コンポーネントへの引数
-コンポーネントの振る舞いを切り替える場合などに使う
-コンポーネントタグの中に書く
-下記の場合 fontColor と context が props として渡される
+コンポーネントへの引数  
+コンポーネントの振る舞いを切り替える場合などに使う  
+コンポーネントタグの中に書く  
+下記の場合 fontColor と context が props として渡される  
 ```
 <ColofullMessage fontColor = "blue" context = "お元気ですか？"></ColofullMessage>
 ```
