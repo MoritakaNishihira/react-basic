@@ -5,8 +5,7 @@
     "lib": ["DOM", "ES2022"],
     "module": "AMD",
     "allowJs": true,
-    "strict": true,
-    "jsx": "react-jsx"
+    "strict": true
   },
   "include": ["./node_modules/@types"]
 }

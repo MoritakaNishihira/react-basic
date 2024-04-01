@@ -1,21 +1,12 @@
 import { StrictMode } from "react"; // 厳密なルールでreactを定義する
 import { createRoot } from "react-dom/client";
+import { App } from "./App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
-// コンポーネントは関数で作る
-// 関数名の頭は大文字
-const App = () => {
-  return (
-    // 複数のhtmlタグが含まれるコンポーネントは <div></div>で囲む
-    <div>
-      <h1>おはこんにちは</h1>
-      <p>react</p>
-    </div>
-  );
-};
-
+// rootElement内にコンポーネント(App)をレンダリングする
+// index.js も必要最低限の記述のみにし、諸々のコンポーネントは App.jsx に書く
 root.render(
   <StrictMode>
     <App></App>
