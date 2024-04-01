@@ -5,7 +5,7 @@ React の基本を学ぶ
 # index.html
 
 【お作法】index.html は以下の記述のみ
-'''
+```
   <html>
     <head>
       <meta charset="utf-8" />
@@ -15,7 +15,8 @@ React の基本を学ぶ
       <div id="root"></div>
     </body>
   </html>
-'''
+```
+
 # App.jsx
 
 コンポーネントは関数で作る
