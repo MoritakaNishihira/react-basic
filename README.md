@@ -32,11 +32,10 @@ App.jsx
 ```
 const App = () => {
 return (
-
-  <div>
-  <h1> hello world !! </h1>
-  <p> today is 2024.4.1 </p>
-  </div>
+    <div>
+      <h1> hello world !! </h1>
+      <p> today is 2024.4.1 </p>
+    </div>
   )}
 ```
 
@@ -50,9 +49,9 @@ return (
 スタイルはキャメル記法で書く font-size → fontSize
 ```
 const contentStyle = {
-color : "red",
-fontSize : "18px"
-margin : 10
+  color : "red",
+  fontSize : "18px"
+  margin : 10
 }
 ```
 
@@ -73,9 +72,9 @@ const root = createRoot(rootElement);
 // rootElement 内にコンポーネント(App)をレンダリングする
 // index.js も必要最低限の記述のみにし、諸々のコンポーネントは App.jsx に書く
 root.render(
-<StrictMode>
-<App></App>
-</StrictMode>
+  <StrictMode>
+    <App></App>
+  </StrictMode>
 );
 ```
 # props
@@ -91,11 +90,11 @@ root.render(
 受け取った側では下記のように使う
 ```
 export const ColofullMessage = (props) => {
-const {fontColor , context} = props
-const contentStyle = {
-color : fontColor,
-fontSize : "18px"
-}
-return <p style={contentStyle}>{context}</p>;
+  const {fontColor , context} = props
+  const contentStyle = {
+    color : fontColor,
+    fontSize : "18px"
+  }
+  return <p style={contentStyle}>{context}</p>;
 };
 ```
